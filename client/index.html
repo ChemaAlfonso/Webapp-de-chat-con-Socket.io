@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <style>
+        #messages{
+            width: 80%;
+            margin: auto;
+            height: 20em;
+            overflow-y: scroll;
+            box-shadow: 0pñx 0px 10px #ccc;
+        }
+
+        .message{
+            margin: 2em 0;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background: white;
+            padding: .3em;
+        }
+
+    </style>
+    <title>Chat con Socket IO</title>
+</head>
+<body>
+    <h1>Chat con Socket IO</h1>
+    <div id="messages"></div>
+
+    <form onsubmit="return addMessage(this);">
+        <input type="text" id="nickname" name="nickname" placeholder="nick"/>
+        <textarea id="text"  name="text" placeholder="mensaje..."></textarea>
+        <input type="submit" value="Enviar" />
+    </form>
+
+</body>
+</html>
